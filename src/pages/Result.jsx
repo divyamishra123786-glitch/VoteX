@@ -22,7 +22,7 @@ function Result() {
   const fetchResults = async () => {
     try {
       const response = await axios.get(
-        "http://127.0.0.1:5000/api/candidates/results"
+        "https://votex-backend-qep1.onrender.com/api/candidates/results"
       );
 
       // backend sends { success, totalVotes, winner, results: [...] }
@@ -134,12 +134,13 @@ function Result() {
               <strong>Votes :</strong> {candidate.votes} (
               {candidate.percentage}%)
             </p>
+
             <div className="progress-track">
-  <div
-    className="progress-fill"
-    style={{ width: `${candidate.percentage}%` }}
-  ></div>
-</div>
+              <div
+                className="progress-fill"
+                style={{ width: `${candidate.percentage}%` }}
+              ></div>
+            </div>
 
           </div>
 

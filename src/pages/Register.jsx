@@ -23,7 +23,7 @@ function Register() {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:5000/api/users/register",
+        "https://votex-backend-qep1.onrender.com/api/users/register",
         {
           name: user.name,
           email: user.email,

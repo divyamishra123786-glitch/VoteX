@@ -15,7 +15,7 @@ function CandidateDetails() {
   const fetchCandidate = async () => {
     try {
       const res = await axios.get(
-        `http://127.0.0.1:5000/api/candidates/${id}`
+        `https://votex-backend-qep1.onrender.com/api/candidates/${id}`
       );
 
       setCandidate(res.data.candidate);
@@ -45,9 +45,8 @@ function CandidateDetails() {
   return (
     <div className="details-page">
       <div className="details-card">
-
         <img
-          src={`http://127.0.0.1:5000${candidate.image}`}
+          src={`https://votex-backend-qep1.onrender.com${candidate.image}`}
           alt={candidate.name}
           className="details-image"
         />
@@ -66,7 +65,6 @@ function CandidateDetails() {
         <Link to="/vote" className="back-btn">
           ← Back to Voting
         </Link>
-
       </div>
     </div>
   );

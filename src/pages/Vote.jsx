@@ -33,7 +33,7 @@ function Vote() {
   const fetchCandidates = async () => {
     try {
       const res = await axios.get(
-        "http://127.0.0.1:5000/api/candidates"
+        "https://votex-backend-qep1.onrender.com/api/candidates"
       );
 
       setCandidates(res.data);
@@ -58,7 +58,7 @@ function Vote() {
 
     try {
       await axios.post(
-        "http://127.0.0.1:5000/api/candidates/vote",
+        "https://votex-backend-qep1.onrender.com/api/candidates/vote",
         {
           userId,
           candidateId,
