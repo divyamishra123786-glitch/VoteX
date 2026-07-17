@@ -1,0 +1,11 @@
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-username {
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.95rem;
+}
